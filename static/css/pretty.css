@@ -1,0 +1,64 @@
+*{
+	border: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+h1{
+	font-size: 5rem;
+}
+
+section#main{
+	height: 100vh;
+}
+
+.box{
+	display: inline-block;
+	height: 50%;
+	margin-bottom: -4px;
+	position: relative;
+	width: 100%;
+}
+
+.color1{
+	background-color: #40434E;
+}
+
+.color2{
+	background-color: #080705;
+}
+
+.right{
+	float: right;
+}
+
+#dancer{
+	height: 50vh;
+	width: 100%
+}
+
+#firstName{
+	bottom: 0;
+	color: #080705;
+	margin-bottom: -20px;
+	position: absolute;
+}
+
+#lastName{
+	color: #40434E;
+	float: right;
+	margin-top: -15px;
+}
+
+#lastNameContainer{
+	display: inline-block;
+	margin: 0 auto;
+	width: 100%;
+}

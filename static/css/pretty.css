@@ -28,15 +28,14 @@ section#main{
 }
 
 .color1{
-	background-color: #40434E;
+	background-color: #6496e5;
+	position: fixed;
+	z-index: -50;
 }
 
 .color2{
 	background-color: #080705;
-}
-
-.right{
-	float: right;
+	margin: 50vh 0 0 0;
 }
 
 #dancer{
@@ -45,20 +44,34 @@ section#main{
 }
 
 #firstName{
-	bottom: 0;
 	color: #080705;
-	margin-bottom: -20px;
-	position: absolute;
+	margin: -72px 0 -20px 25%;
 }
 
 #lastName{
-	color: #40434E;
+	color: #6496e5;
 	float: right;
-	margin-top: -15px;
+	margin: -19px 25% 0 0;
 }
 
-#lastNameContainer{
+nav{
+	background-color: #080705;
+	color: #6496e5;
+	position: relative;
+	margin: -25px auto 0 auto;
+	z-index: 50;
+}
+
+ul{
+	text-align: center;
+	width: 100%
+}
+
+li{
 	display: inline-block;
-	margin: 0 auto;
-	width: 100%;
+}
+
+section#projects{
+	height: 1000px;
+	background-color: orange;
 }

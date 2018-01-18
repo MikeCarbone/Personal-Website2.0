@@ -1,3 +1,36 @@
+@keyframes slideFromLeft{
+	0%{
+		opacity: 0;
+		margin-left: -300px;
+	}
+	10%{
+		opacity: 100;
+	}
+	100%{
+		margin-left: 25%;
+		opacity: 100;
+	}
+}
+
+@keyframes slideFromRight{
+	0%{
+		opacity: 0;
+		margin-right: -300px;
+	}
+	10%{
+		opacity: 100;
+	}
+	100%{
+		margin-right: 25%;
+		opacity: 100;
+	}
+}
+
+
+
+
+
+
 *{
 	border: none;
 	box-sizing: border-box;
@@ -27,6 +60,7 @@ h1{
 
 section#main{
 	height: 100vh;
+	z-index: 100;
 }
 
 .box{
@@ -40,28 +74,35 @@ section#main{
 .color1{
 	background-color: #6496e5;
 	position: fixed;
-	z-index: -50;
+	z-index: 200;
 }
 
 .color2{
 	background-color: #080705;
 	margin: 50vh 0 0 0;
+	z-index: 300;
 }
 
 #dancer{
 	height: 50vh;
-	width: 100%
+	width: 100%;
+	z-index: 100;
 }
 
 #firstName{
 	color: #080705;
 	margin: -72px 0 -20px 25%;
+	opacity: 0;
+	animation: slideFromLeft 1.5s ease-out 2s 1 forwards;
+
 }
 
 #lastName{
 	color: #6496e5;
 	float: right;
 	margin: -19px 25% 0 0;
+	opacity: 0;
+	animation: slideFromRight 1.5s ease-out 2s 1 forwards;
 }
 
 nav{
@@ -69,7 +110,8 @@ nav{
 	color: #6496e5;
 	position: relative;
 	margin: -25px auto 0 auto;
-	z-index: 50;
+	padding: 0  0 20px 0;
+	z-index: 500;
 }
 
 ul{
@@ -80,8 +122,69 @@ ul{
 li{
 	display: inline-block;
 }
+/*-----------------------------------About Section----------------------------------*/
+section#about{
+	background-color: #2B2B2B;
+	height: 700px;
+	position: relative;
+	width: 100%;
+	z-index: 4000;
+}
+
+section#about h1,h2{
+	color: #A5A5A5;
+	font-size: 1.1rem;
+	padding: 25px 10% 25px 0;
+}
+
+/*-----------------------------------Projects Section ------------------------------*/
 
 section#projects{
+	background-color: #CE512B;
 	height: 1000px;
-	background-color: orange;
+	position: relative;
+	width: 100%;
+	z-index: 1000;
+}
+
+#projectsBar{
+	background-color: #6496E5;
+	height: 100px;
+	position: relative;
+	width: 100%;
+	z-index: 1500;
+}
+
+#projectsBar h1{
+	font-size: 36px;
+}
+
+.tri{
+	display: inline-flex;
+	height: 33vh;
+	margin-left: -2px;
+	margin-right: -2px;
+	position: relative;
+	width: 33.33%;
+	z-index: 5000;
+}
+
+.tri h1{
+	font-size: 24px;
+	margin: 40% auto 0 auto;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+#ed{
+	background-color: #CE512B;
+}
+
+#gobibit{
+	background-color: #268BCB;
+}
+
+#imdb{
+	background-color: #DEB522;
 }

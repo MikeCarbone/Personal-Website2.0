@@ -3,9 +3,14 @@
 <head>
 	<title>Mike Carbone</title>
 	<link rel="stylesheet" type="text/css" href="{{ static_url('css/pretty.css') }}">
+
+	<!--Model Scripts-->
 	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 	<script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 </head>
 <body>
 	<button id="burger">&#9776;</button>
@@ -49,20 +54,40 @@
 	</nav>
 
 	<section id="about">
-		<h2>My name is Mike Carbone, an Interactive Digital Media sophomore at Drexel University. Using Javascript, CSS, and Python, I really like creating simple, efficient, and user-friendly applications that serve a direct purpose. I'm also a pretty cool dude that likes Rocket League and PUBG.</h2>
-		<h3>TL;DR: I like making cool web apps</h3>
+		<div id="textStuff">
+			<h1>About me</h1>
+			<h2>My name is Mike Carbone, an Interactive Digital Media sophomore at Drexel University. Using Javascript, CSS, and Python, I really like creating simple, efficient, and user-friendly applications that serve a direct purpose. My areas of interest include augmented reality, virtual reality, and immersive media. I'm also a pretty cool dude that likes Rocket League and PUBG.</h2>
+
+			<h1>Contact me</h1>
+			<h2>Philadelphia, PA</h2>
+			<h2>(267) 362-9708</h2>
+			<h2>mfcbone@gmail.com</h2>
+		</div>
 	</section>
 
 	<section id="projects">
 		<div id="projectsBar"><h1>projects</h1></div>
-		<div class="tri" id="gobibit">
-				<h1 class="title">goBibit</h1>
+		<div class="row">
+			<div class="tri" id="imdb">
+					<h1 class="title">IMDb UI Redesign</h1>
+			</div>
+			<div class="tri" id="gobibit">
+					<h1 class="title">goBibit</h1>
+			</div>
+			<div class="tri" id="ed">
+					<h1 class="title">TickleEdSheeran</h1>
+			</div>
 		</div>
-		<div class="tri" id="imdb">
-				<h1 class="title">IMDb Redesign</h1>
-		</div>
-		<div class="tri" id="ed">
-				<h1 class="title">TickleEdSheeran</h1>
+		<div class="row">
+			<div class="tri" id="tetrad">
+					<h1 class="title">WebVR Color</h1>
+			</div>
+			<div class="tri" id="zodiac">
+					<h1 class="title">Zodiac Project</h1>
+			</div>
+			<div class="tri" id="presentation">
+					<h1 class="title">WebVR Presentation</h1>
+			</div>
 		</div>
 	</section>
 </body>

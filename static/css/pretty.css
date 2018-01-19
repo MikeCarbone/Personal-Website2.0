@@ -26,14 +26,10 @@
 	}
 }
 
-
-
-
-
-
 *{
 	border: none;
 	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -100,7 +96,7 @@ section#main{
 #lastName{
 	color: #6496e5;
 	float: right;
-	margin: -19px 25% 0 0;
+	margin: -23px 25% 0 0;
 	opacity: 0;
 	animation: slideFromRight 1.5s ease-out 2s 1 forwards;
 }
@@ -124,57 +120,99 @@ li{
 }
 /*-----------------------------------About Section----------------------------------*/
 section#about{
-	background-color: #2B2B2B;
-	height: 700px;
+	background-color: #0F1927;
+	border-top: 5px solid transparent;
+	height: 100%;
 	position: relative;
 	width: 100%;
 	z-index: 4000;
+	transition: border-top .5s ease-out 0s;
 }
 
-section#about h1,h2{
+section#about:hover{
+	transition: border-top .5s ease-in 0s;
+	border-top: 5px solid #6496E5;
+}
+
+#textStuff{
+	font-family: 'Open-Sans', sans-serif;
+	margin: 0px 8% 0 20%;
+	padding: 55px 0 85px 0;
+}
+
+section#about h1, h2{
+	font-family: 'Open-Sans', sans-serif;
+}
+
+section#about h2{
 	color: #A5A5A5;
-	font-size: 1.1rem;
-	padding: 25px 10% 25px 0;
+	font-size: .95rem;
+	font-weight: lighter;
+	line-height: 24px;
+	padding: 0px 0 0px 0;
+}
+
+section#about h1{
+	color: #F9F9F9;
+	font-size: 1.3rem;
+	padding: 25px 10% 20px 0;
 }
 
 /*-----------------------------------Projects Section ------------------------------*/
 
 section#projects{
-	background-color: #CE512B;
-	height: 1000px;
+	background-color: #080705;
+	height: 100%;
 	position: relative;
 	width: 100%;
 	z-index: 1000;
 }
 
 #projectsBar{
-	background-color: #6496E5;
-	height: 100px;
+	background-color: #080705;
+	height: 90px;
 	position: relative;
 	width: 100%;
 	z-index: 1500;
 }
 
 #projectsBar h1{
+	color: #6496E5;
 	font-size: 36px;
+	margin: 0px auto;
+	padding: 19px 0 0 0;
+	text-align: center;
+	width: 100%;
 }
 
 .tri{
 	display: inline-flex;
-	height: 33vh;
-	margin-left: -2px;
-	margin-right: -2px;
+	height: 200px;
+	margin: 0px 10px;
 	position: relative;
-	width: 33.33%;
+	transition: all .5s ease-out 0s;
+	transform: scale(1);
+	width: 30%;
 	z-index: 5000;
+}
+
+.row{
+	margin: 0 auto 30px auto;
+	text-align: center;
+	width: 100%;
 }
 
 .tri h1{
 	font-size: 24px;
-	margin: 40% auto 0 auto;
+	margin: 80px auto 0 auto;
 	position: relative;
 	text-align: center;
 	width: 100%;
+}
+
+.tri:hover{
+	transition: all .5s ease-in-out 0s;
+	transform: scale(1.05);
 }
 
 #ed{
@@ -183,8 +221,17 @@ section#projects{
 
 #gobibit{
 	background-color: #268BCB;
+	color: white;
 }
 
 #imdb{
 	background-color: #DEB522;
+}
+
+#tetrad, #presentation{
+	background-color: #24CAFF;
+}
+
+#zodiac{
+	background-color: #E6315D;
 }

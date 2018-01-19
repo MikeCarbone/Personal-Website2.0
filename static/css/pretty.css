@@ -26,6 +26,36 @@
 	}
 }
 
+@keyframes skillFillCss{
+	from{
+		width: 0%;
+	}
+
+	to{
+		width: 95%;
+	}
+}
+
+@keyframes skillFillJavascript{
+	from{
+		width: 0%;
+	}
+
+	to{
+		width: 60%;
+	}
+}
+
+@keyframes skillFillPython{
+	from{
+		width: 0%;
+	}
+
+	to{
+		width: 40%;
+	}
+}
+
 *{
 	border: none;
 	box-sizing: border-box;
@@ -122,16 +152,18 @@ li{
 section#about{
 	background-color: #0F1927;
 	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
 	height: 100%;
 	position: relative;
 	width: 100%;
 	z-index: 4000;
-	transition: border-top .5s ease-out 0s;
+	transition: all .5s ease-out 0s;
 }
 
 section#about:hover{
-	transition: border-top .5s ease-in 0s;
-	border-top: 5px solid #6496E5;
+	transition: all .5s ease-in 0s;
+	border-top: 5px solid #E57A22;
+	border-bottom: 5px solid #E57A22;
 }
 
 #textStuff{
@@ -163,6 +195,7 @@ section#about h1{
 section#projects{
 	background-color: #080705;
 	height: 100%;
+	padding: 0 0 80px 0;
 	position: relative;
 	width: 100%;
 	z-index: 1000;
@@ -170,13 +203,13 @@ section#projects{
 
 #projectsBar{
 	background-color: #080705;
-	height: 90px;
+	height: 110px;
 	position: relative;
 	width: 100%;
 	z-index: 1500;
 }
 
-#projectsBar h1{
+.sectionTitle{
 	color: #6496E5;
 	font-size: 36px;
 	margin: 0px auto;
@@ -186,11 +219,12 @@ section#projects{
 }
 
 .tri{
+	cursor: pointer;
 	display: inline-flex;
 	height: 200px;
 	margin: 0px 10px;
 	position: relative;
-	transition: all .5s ease-out 0s;
+	transition: all .25s ease-out 0s;
 	transform: scale(1);
 	width: 30%;
 	z-index: 5000;
@@ -211,7 +245,7 @@ section#projects{
 }
 
 .tri:hover{
-	transition: all .5s ease-in-out 0s;
+	transition: all .25s ease-in-out 0s;
 	transform: scale(1.05);
 }
 
@@ -234,4 +268,114 @@ section#projects{
 
 #zodiac{
 	background-color: #E6315D;
+}
+
+/*--------------------------------------Skills Section-----------------------------------*/
+
+section#skills{
+	background-color: #0F1927;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	height: 100%;
+	padding: 0 0 63px 0;
+	position: relative;
+	transition: all .5s ease-out 0s;
+	z-index: 200;
+}
+
+section#skills:hover{
+	transition: all .5s ease-in 0s;
+	border-top: 5px solid #E57A22;
+	border-bottom: 5px solid #E57A22;
+}
+
+#skillsContainer{
+	margin: 50px auto;
+	width: 60%;
+}
+
+.skillName{
+	color: #0F1927;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0px auto 12px auto;
+	padding: 6px 0 0 0;
+	text-align: center;
+}
+
+.skillBox{
+	background-color: #031e4a;
+	border-radius: 2px; 
+	height: 40px;
+	margin: 50px auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+.skillFill{
+	background-color: #E57A22;
+	height: 100%;
+	position: relative;
+	transition: background-color .25s ease-out 0s;
+	width: 0%;
+}
+
+.skillFill:hover{
+	background-color: #904d15;
+	transition: background-color .25s ease-in 0s;
+}
+
+#css{
+	animation: skillFillCss 2s ease-in-out 1s 01 forwards;
+}
+
+#javascript{
+	animation: skillFillJavascript 2s ease-in-out 1s 01 forwards;
+}
+
+#python{
+	animation: skillFillPython 2s ease-in-out 1s 01 forwards;
+}
+
+/*------------------------------------Contact Section-------------------------------*/
+
+section#contact{
+	background-color: #080705;
+	color: #F9F9F9;
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+	position: relative;
+	z-index: 200;
+}
+
+#contactContainer{
+	font-size: .95rem;
+	font-weight: lighter;
+	margin: 0px auto;
+	padding: 40px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#contactContainer h1, h2, h3{
+	color: #C1C1C1;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 100;
+	letter-spacing: 1px;
+	padding: 10px 0;
+}
+
+#links{
+	margin: 0 0 200px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#copy{
+	bottom: 0;
+	color: #4C4C4C;
+	padding: 0px 0 8px 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }

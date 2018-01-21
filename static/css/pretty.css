@@ -131,15 +131,6 @@ section#main{
 	animation: slideFromRight 1.5s ease-out 2s 1 forwards;
 }
 
-nav{
-	background-color: #080705;
-	color: #6496e5;
-	position: relative;
-	margin: -25px auto 0 auto;
-	padding: 0  0 20px 0;
-	z-index: 500;
-}
-
 ul{
 	text-align: center;
 	width: 100%
@@ -184,7 +175,7 @@ section#about h2{
 	padding: 0px 0 0px 0;
 }
 
-section#about h1{
+.smallTitle{
 	color: #F9F9F9;
 	font-size: 1.3rem;
 	padding: 25px 10% 20px 0;
@@ -204,6 +195,7 @@ section#projects{
 #projectsBar{
 	background-color: #080705;
 	height: 110px;
+
 	position: relative;
 	width: 100%;
 	z-index: 1500;
@@ -213,7 +205,7 @@ section#projects{
 	color: #6496E5;
 	font-size: 36px;
 	margin: 0px auto;
-	padding: 19px 0 0 0;
+	padding: 30px 0 0 0;
 	text-align: center;
 	width: 100%;
 }
@@ -237,7 +229,9 @@ section#projects{
 }
 
 .tri h1{
+	font-family: 'Open-Sans', sans-serif;
 	font-size: 24px;
+	font-weight: lighter;
 	margin: 80px auto 0 auto;
 	position: relative;
 	text-align: center;
@@ -268,6 +262,20 @@ section#projects{
 
 #zodiac{
 	background-color: #E6315D;
+}
+
+.projectCard{
+	background-color: red;
+	color: white;
+	display: none;
+	height: 400px;
+	position: fixed;
+	width: 400px;
+	z-index: 10000;
+}
+
+#gobibitCard{
+	display: block;
 }
 
 /*--------------------------------------Skills Section-----------------------------------*/
@@ -321,7 +329,8 @@ section#skills:hover{
 
 .skillFill:hover{
 	background-color: #904d15;
-	transition: background-color .25s ease-in 0s;
+	color: white;
+	transition: all .25s ease-in 0s;
 }
 
 #css{

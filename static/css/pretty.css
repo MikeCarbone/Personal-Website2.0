@@ -74,6 +74,10 @@ h1{
 	font-size: 5rem;
 }
 
+button{
+	cursor: pointer;
+}
+
 #burger{
 	background-color: transparent;
 	color: #6496e5;
@@ -147,7 +151,7 @@ section#about{
 	height: 100%;
 	position: relative;
 	width: 100%;
-	z-index: 4000;
+	z-index: 800;
 	transition: all .5s ease-out 0s;
 }
 
@@ -265,13 +269,85 @@ section#projects{
 }
 
 .projectCard{
-	background-color: red;
-	color: white;
+	background-color: #0F1927;
+	border: 1px solid black;
+	color: #F9F9F9;
 	display: none;
-	height: 400px;
+	font-family: 'Open-Sans', sans-serif;
+	height: 70vh;
+	left: 20%;
+	right: 20%;
+	margin: 0 auto;
+	max-width: 600px;
+	min-width: 400px;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	position: fixed;
-	width: 400px;
+	top: 15%;
+	width: 60%;
 	z-index: 10000;
+}
+
+.projectCard img{
+	height: auto;
+	margin: 50px 0 0 10%;
+	position: relative;
+	text-align: center;
+	width: 80%;
+}
+
+.projectCard h1{
+	font-size: 1.2rem;
+	font-weight: lighter;
+	margin: 20px 20% 20px 20%;
+	position: relative;
+	width: 60%;
+}
+
+.projectCard h2{
+	color: #F9F9F9;
+	font-size: 1rem;
+	margin: 20px 20% 0px 20%;
+	position: relative;
+	width: 60%;
+}
+
+.projectCard p{
+	color: #A5A5A5;
+	font-size: .95rem;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	line-height: 22px;
+	margin: 20px 20% 0 20%;
+	position: relative;
+	width: 60%;
+}
+
+.projectCard ul{
+	color: #A5A5A5;
+	display: block;
+	margin: 20px 0 0 20%;
+}
+
+.projectCard li{
+	padding: 2px 0 2px 0;
+	text-align: left;
+	width: 100%;
+}
+
+.projectCard button{
+	background-color: #E57A22;
+	border-radius: 2px;
+	bottom: 0;
+	font-size: 1.5rem;
+	height: 75px;
+	margin: 40px auto 40px 10%;
+	position: relative;
+	width: 80%;
+}
+
+.projectCard button:hover{
+	background-color: #904d15;
 }
 
 #gobibitCard{

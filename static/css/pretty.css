@@ -350,10 +350,6 @@ section#projects{
 	background-color: #904d15;
 }
 
-#gobibitCard{
-	display: block;
-}
-
 /*--------------------------------------Skills Section-----------------------------------*/
 
 section#skills{
@@ -368,7 +364,7 @@ section#skills{
 }
 
 section#skills:hover{
-	transition: all .5s ease-in 0s;
+	transition: all .2s ease-in 0s;
 	border-top: 5px solid #E57A22;
 	border-bottom: 5px solid #E57A22;
 }

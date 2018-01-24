@@ -7,13 +7,23 @@ class MainHandler(tornado.web.RequestHandler):
 	def get(self):
 		self.render('home.html')
 
+class tetradHandler(tornado.web.RequestHandler):
+	def get(self):
+		self.render('tetrad.html')
+
+class presentationHandler(tornado.web.RequestHandler):
+	def get(self):
+		self.render('presentation.html')
+
 settings = dict(
 	template_path = os.path.join(os.path.dirname(__file__), "templates"),
 	static_path = os.path.join(os.path.dirname(__file__), "static"),
 	debug = True
 )
 
-handlers = [(r'/', MainHandler)]
+handlers = [(r'/', MainHandler),
+			('/tetrad', tetradHandler),
+			('/presentation', presentationHandler)]
 
 def app():
 	print('Server Running...')

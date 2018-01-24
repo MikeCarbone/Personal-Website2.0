@@ -13,7 +13,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 </head>
 <body>
-	<button id="burger">&#9776;</button>
+
+	<div id="burgerMenu">
+		<button id="burger" onclick="menuOpenClose()">&#9776;</button>
+		<ul id="sideNav">
+			<a href="#main"><li>top</li></a>
+			<a href="#about"><li>about</li></a>
+			<a href="#projects"><li>projects</li></a>
+			<a href="#skills"><li>skills</li></a>
+			<a href="#contact"><li>contact</li></a>
+		</ul>
+	</div>
+
 	<section id="main">
 		<div class="box color1">
 			<div id="dancer">
@@ -45,7 +56,6 @@
 			<h1 id="lastName">carbone</h1>
 		</div>
 	</section>
-
 	<section id="about">
 		<h1 class="sectionTitle">about</h1>
 		<div id="textStuff">
@@ -180,5 +190,7 @@
 		
 			<h5 id="copy">&copy; Mike Carbone 2018. All rights reserved.</h5>
 	</section>
+
+	<script type="text/javascript" src="{{ static_url('js/fancy.js') }}"></script>
 </body>
 </html>

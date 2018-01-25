@@ -1,16 +1,22 @@
 var sideNav = document.getElementById('sideNav');
+var burger = document.getElementById('burger');
 var isMenuOpen = false;
 
 function menuEnter(){
-	sideNav.style.display = 'block';
-	sideNav.classList = '';
+	sideNav.classList.remove('navSwingOut');
 	sideNav.classList.add('navSwingIn');
+	burger.classList.remove('burgerFlipSide');
+	burger.classList.add('burgerFlipDown');
+	
 }
 
 function menuLeave(){
-	sideNav.classList = '';
+	console.log('in menuLeave()');
+	sideNav.classList.remove('navSwingIn');
 	sideNav.classList.add('navSwingOut');
-	sideNav.style.display = 'none';
+	burger.classList.remove('burgerFlipDown');
+	burger.classList.add('burgerFlipSide');
+	
 }
 
 function menuOpenClose(){

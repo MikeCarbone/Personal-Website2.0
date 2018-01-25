@@ -56,19 +56,24 @@
 	}
 }
 
-@keyframes menuJitter{
-	25%{
-		margin-left: 1%;
+@keyframes burgerRotateDown{
+	from{
+		transform: rotate(0deg);
 	}
-	75%{
-		margin-left: 8%;
-		width: 3%;
-	}
-	100%{
-		margin-left: 3%;
-		width: 5%;
+	to{
+		transform: rotate(-90deg);
 	}
 }
+
+@keyframes burgerRotateSide{
+	from{
+		transform: rotate(-90deg);
+	}
+	to{
+		transform: rotate(0deg);
+	}
+}
+
 
 @keyframes menuSwingIn{
 	from{
@@ -78,6 +83,18 @@
 	to{
 		transform-origin: left top;
 		transform: rotate(0deg);
+	}
+}
+
+
+@keyframes menuSwingOut{
+	from{
+		transform-origin: left top;
+		transform: rotate(0deg);
+	}
+	to{
+		transform-origin: left top;
+		transform: rotate(90deg);
 	}
 }
 
@@ -105,6 +122,14 @@ button{
 	cursor: pointer;
 }
 
+button:focus{
+	outline: 0;
+}
+
+a:visited{
+	color: #6496E5;
+}
+
 /*----------------------------------Nav-----------------------------*/
 
 #burger{
@@ -117,8 +142,6 @@ button{
 	transition: color .5s ease-out 0s;
 	width: 5%;
 	z-index: 100000000;
-
-	animation: menuJitter 1.5s ease-out 0s 1 forwards;
 }
 
 #burger:hover{
@@ -127,14 +150,15 @@ button{
 }
 
 #burgerMenu ul{
-	background-color: #080705;
+	/*background-color: #080705;*/
 	border-radius: 3px;
-	display: none;
 	/*border: 1px solid #6496E5;*/
-	margin: 60px 0 0 0;
+	margin: 60px 0 0 9px;
 	max-width: 160px;
 	min-width: 130px;
 	position: fixed;
+	transform-origin: left top;
+	transform: rotate(90deg);
 	width: 20%;
 	z-index: 100000;
 }
@@ -160,13 +184,20 @@ button{
 }
 
 .navSwingIn{
-	animation: menuSwing 1.5s ease-in-out 0s infinite forwards;
+	animation: menuSwingIn .25s ease-in-out forwards;
 }
 
 .navSwingOut{
-	animation: menuSwing 1.5s ease-in-out 0s 1 infinite reverse;
+	animation: menuSwingOut .25s ease-in-out forwards;
 }
 
+.burgerFlipDown{
+	animation: burgerRotateDown .25s ease-in-out forwards;
+}
+
+.burgerFlipSide{
+	animation: burgerRotateSide .25s ease-in-out forwards;
+}
 
 
 /*---------------------------------------Main Section-----------------------*/

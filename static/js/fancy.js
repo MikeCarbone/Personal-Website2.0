@@ -2,6 +2,8 @@ var sideNav = document.getElementById('sideNav');
 var burger = document.getElementById('burger');
 var isMenuOpen = false;
 
+var shade = document.getElementById('shade');
+
 function menuEnter(){
 	sideNav.classList.remove('navSwingOut');
 	sideNav.classList.add('navSwingIn');
@@ -19,7 +21,7 @@ function menuLeave(){
 	
 }
 
-function menuOpenClose(){
+function menuSwitch(){
 	if (isMenuOpen == false){
 		menuEnter();
 		isMenuOpen = true;
@@ -28,4 +30,30 @@ function menuOpenClose(){
 		menuLeave();
 		isMenuOpen = false;
 	}
+}
+
+var openProject = ''
+function projectView(projectId){
+	
+	var hoverProject = projectId + 'Card';
+	openProject = hoverProject;
+	showProject(hoverProject);
+
+	function showProject(id){
+
+		document.getElementById(id).style.display = 'block';
+
+		shade.classList = '';
+		shade.style.display = 'block';
+		shade.classList.add('makeDark');
+	}
+}
+
+
+function hideProject(){
+	document.getElementById(openProject).style.display = 'none';
+	
+	shade.classList = '';
+	shade.classList.add('makeLight');
+	setTimeout(function(){ shade.style.display = 'none'; }, 500);
 }
